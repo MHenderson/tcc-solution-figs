@@ -1,0 +1,71 @@
+\begin{tikzpicture}
+
+\GraphInit[vstyle=classic]
+%\draw[help lines] (0, 0) grid (12,12);
+
+\Vertex[x=0, y=3, L=$w$, Lpos = 180]{w};
+
+\Vertex[x=2, y=6, L=$v_{1}$, Lpos = -80]{v1};
+\Vertex[x=2, y=4, L=$v_{2}$, Lpos = -80]{v2};
+\Vertex[x=2, y=2, L=$v_{3}$, Lpos = -80]{v3};
+\Vertex[x=2, y=0, L=$v_{4}$, Lpos = -80]{v4};
+
+\Vertex[x=4, y=0, L=$v_{8}$, NoLabel=true]{v8};
+
+\Vertex[x=6, y=0, L=$v_{11}$, NoLabel=true]{v11};
+
+\Vertex[x=8, y=8, L=$v_{12}$, NoLabel=true]{v12};
+
+\Vertex[x=10, y=6, L=$v_{17}$, NoLabel=true]{v17};
+\Vertex[x=8, y=4, L=$v_{18}$, NoLabel=true]{v18};
+\Vertex[x=8, y=2, L=$v_{19}$, NoLabel=true]{v19};
+
+\SetVertexNormal
+\SetVertexLabelIn
+
+\Vertex[x=4, y=7, L=$a$]{v5};
+\Vertex[x=4, y=4, L=$b$]{v6};
+\Vertex[x=4, y=2, L=$a$]{v7};
+\Vertex[x=6, y=8, L=$b$]{v9};
+\Vertex[x=6, y=6, L=$b$]{v10};
+\Vertex[x=8, y=6, L=$a$]{v13};
+\Vertex[x=6, y=4, L=$a$]{v14};
+\Vertex[x=6, y=2, L=$b$]{v15};
+\Vertex[x=8, y=0, L=$b$]{v16};
+\Vertex[x=10, y=0, L=$a$]{v20};
+\Vertex[x=10, y=4, L=$b$]{v21};
+\Vertex[x=7, y=3, L=$b$]{v22};
+\Vertex[x=9, y=3, L=$a$]{v23};
+
+\Edge[style = {-}, label = {$e_{1}$}, labelstyle={above, sloped}]({w})({v1})
+\Edge[style = {-}, label = {$e_{2}$}, labelstyle={above, sloped}]({w})({v2})
+\Edge[style = {-}, label = {$e_{3}$}, labelstyle={above, sloped}]({w})({v3})
+\Edge[style = {-}, label = {$e_{4}$}, labelstyle={above, sloped}]({w})({v4})
+
+\Edge[style = {-}, label = {$b$}, labelstyle={above, sloped}]({v1})({v5})
+\Edge[style = {-}, label = {$a$}, labelstyle={above}]({v2})({v6})
+\Edge[style = {-}, label = {$b$}, labelstyle={above}]({v3})({v7})
+\Edge[style = {-}, label = {$a$}, labelstyle={above}]({v4})({v8})
+
+\Edge[style = {-, dashed}]({v5})({v9})
+\Edge[style = {-, dashed}]({v5})({v10})
+\Edge[style = {-, dashed}]({v6})({v14})
+\Edge[style = {-, dashed}]({v7})({v15})
+\Edge[style = {-}, label = {$b$}, labelstyle={above}]({v8})({v11})
+
+\Edge[style = {-}, label = {$a$}, labelstyle={above}]({v9})({v12})
+\Edge[style = {-, dashed}]({v10})({v13})
+\Edge[style = {-}, label = {$a$}, labelstyle={above}]({v11})({v16})
+
+\Edge[style = {-}, label = {$b$}, labelstyle={above}]({v13})({v17})
+\Edge[style = {-}, label = {$b$}, labelstyle={above}]({v14})({v18})
+\Edge[style = {-}, label = {$a$}, labelstyle={above}]({v15})({v19})
+\Edge[style = {-, dashed}]({v16})({v20})
+
+\Edge[style = {-}, label = {$a$}, labelstyle={above}]({v18})({v21})
+
+\Edge[style = {-, dashed}]({v14})({v22})
+\Edge[style = {-, dashed}]({v22})({v23})
+\Edge[style = {-, dashed}]({v23})({v21})
+
+\end{tikzpicture}
