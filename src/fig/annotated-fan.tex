@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+  \GraphInit[vstyle=Classic]
+
+  \Vertex[Lpos=180, L={$w$}]{w}
+  \Vertex[Lpos=-90, a=0, d=4cm, L=$v_{1}$]{v1}
+  \Vertex[Lpos=-90, a=25, d=4cm, L=$v_{2}$]{v2}
+  \Vertex[Lpos=-90, a=50, d=4cm, L=$v_{3}$]{v3}
+  \Vertex[Lpos=180, a=85, d=4cm, L=$v_{s - 1}$]{vsm1}
+  \Vertex[Lpos=180, a=110, d=4cm, L=$v_{s}$]{vs}
+
+  \Edge[style ={-, dashed}, label={$f$}, labelstyle={below, sloped}]({w})({v1})
+  \Edge[style ={-}, label={not $a$}, labelstyle={above, sloped}]({w})({v2})
+  \Edge[style ={-}, label={not $a$}, labelstyle={above, sloped}]({w})({v3})
+  \Edge[style ={-}, label={not $a$}, labelstyle={above, sloped}]({w})({vsm1})
+  \Edge[style ={-}, label={not $a$}, labelstyle={below, sloped}]({w})({vs})
+
+  \Edge[style ={-,dashed,bend right}]({v3})({vsm1})
+
+\end{tikzpicture}
+
