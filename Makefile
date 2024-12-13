@@ -1,9 +1,9 @@
 PROJECT = tcc-solution-figs
 VERSION = 0.0.0
 
-FINAL_INPUT = src/$(PROJECT).tex src/*.tex
-FINAL_OUTDIR = ${FINAL_BUILD_FOLDER}/Graph\ Theory/List\ Colouring
-FINAL_OUTPUT = $(FINAL_OUTDIR)/$(PROJECT).pdf
+RELEASE_INPUT = src/$(PROJECT).tex src/*.tex
+RELEASE_OUTDIR = ${RELEASE_BUILD_FOLDER}/Graph\ Theory/List\ Colouring
+RELEASE_OUTPUT = $(RELEASE_OUTDIR)/$(PROJECT).pdf
 
 DRAFT_INPUT = src/$(PROJECT)-draft.tex src/*.tex
 DRAFT_OUTDIR = ${DRAFT_BUILD_FOLDER}/Graph\ Theory/List\ Colouring
@@ -15,7 +15,7 @@ all: draft
 
 draft: $(DRAFT_OUTPUT)
 
-pdf: $(FINAL_OUTPUT)
+pdf: $(RELEASE_OUTPUT)
 
 clean: $(DRAFT_INPUT)
 	latexmk -c -cd -outdir=$(DRAFT_OUTDIR) -xelatex $<
@@ -36,4 +36,4 @@ hooks:
 	.git/hooks/post-commit  \;
 
 count:
-	wc src/main.tex > count.txt 
+	wc src/fig/*.tex > wc.txt 
