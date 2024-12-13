@@ -8,6 +8,10 @@
   \Vertex[Lpos=180, a=85, d=4cm, L=$v_{s - 1}$]{vsm1}
   \Vertex[Lpos=180, a=110, d=4cm, L=$v_{s}$]{vs}
 
+  \Vertex[empty, a=10, d=7cm, NoLabel]{v1n1}
+  \Vertex[empty, a=13, d=7cm, NoLabel]{v1n2}
+  \Vertex[empty, a=16, d=7cm, NoLabel]{v1n3}
+
   \Edge[style ={-, dashed}, label={$f$}, labelstyle={below, sloped}]({w})({v1})
   \Edge[style ={-}, label={not $a$}, labelstyle={above, sloped}]({w})({v2})
   \Edge[style ={-}, label={not $a$}, labelstyle={above, sloped}]({w})({v3})
@@ -16,9 +20,17 @@
 
   \Edge[style ={-,dashed,bend right}]({v3})({vsm1})
 
+  \Edge[]({v1})({v1n1}) 
+  \Edge[]({v1})({v1n2}) 
+  \Edge[]({v1})({v1n3}) 
+
   \node[] at (0, -1.5) {we colour $f$ with colour $a$ in Stage 1};
   \draw[-{Latex[length=3mm]}] (-0.5, -1.2) -- (1, -0.2);
   \node[] at (-1.2, 0) {not $a$};
+
+  \node[] at (5, 2.5) {no edge coloured $a$};
+  \draw[-{Latex[length=3mm]}] (5.1, 2.25) -- (5.4, 1.25);
+  \node[] at (4.8, 0) {not $a$};
 
 \end{tikzpicture}
 
