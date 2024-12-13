@@ -4,4 +4,5 @@
       27      81    1046 src/fig/cycle-rev.tex
       19      49     614 src/fig/cycle.tex
       25      94    1045 src/fig/fan.tex
-     243     821    8796 total
+      26      96    1051 src/fig/special-fan.tex
+     269     917    9847 total
