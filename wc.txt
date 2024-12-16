@@ -3,6 +3,6 @@
       65     227    2294 src/fig/bitt.tex
       27      81    1046 src/fig/cycle-rev.tex
       19      49     614 src/fig/cycle.tex
-      25      94    1045 src/fig/fan.tex
+      26     104    1179 src/fig/fan.tex
       26      96    1051 src/fig/special-fan.tex
-     269     917    9847 total
+     270     927    9981 total
